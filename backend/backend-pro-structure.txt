@@ -1,0 +1,25 @@
+backend
+│
+├── config
+│      db.js
+│
+├── controllers
+│      auth.controller.js
+│      reservation.controller.js
+│
+├── middleware
+│      auth.middleware.js
+│
+├── models
+│      User.js
+│      Reservation.js
+│
+├── routes
+│      auth.routes.js
+│      reservation.routes.js
+│
+├── .env
+│
+├── server.js
+│
+└── package.json

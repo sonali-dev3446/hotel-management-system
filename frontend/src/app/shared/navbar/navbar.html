@@ -1,0 +1,121 @@
+<header class="header">
+
+  <!-- Top Header -->
+
+  <div class="top-header">
+
+    <div class="hotel-info">
+
+      <div class="logo">
+        🏨
+      </div>
+
+      <div>
+        <h2>{{hotelName()}}</h2>
+        <span>Hotel</span>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="header-right">
+
+      <div class="datetime">
+
+        <div>{{currentTime() | date:'EEEE'}}</div>
+
+        <strong>{{currentTime() | date:'dd MMM yyyy'}}</strong>
+
+        <small>{{currentTime() | date:'hh:mm:ss a'}}</small>
+
+      </div>
+
+
+      <button class="notification">
+
+        🔔
+
+        <span class="badge">3</span>
+
+      </button>
+
+
+      <div class="profile">
+
+        <div class="avatar">
+
+          {{userFirstName().charAt(0)}}
+
+        </div>
+
+        <div>
+
+          <!-- <small>Administrator</small> -->
+
+          <strong>{{userFirstName()}}  </strong>
+          <strong>{{userLastName()}}</strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Navigation -->
+
+  <nav class="navbar">
+
+    <a
+      routerLink="/dashboard"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:true}">
+
+      🏠 Dashboard
+
+    </a>
+
+
+    <a
+      routerLink="/list"
+      routerLinkActive="active">
+
+      📅 Reservations
+
+    </a>
+
+
+    <a
+      routerLink="/new-reservation"
+      routerLinkActive="active">
+
+      ➕ New Booking
+
+    </a>
+
+
+    <a>
+
+      📊 Analytics
+
+    </a>
+
+
+    <button
+      class="logout-btn"
+      (click)="logout()">
+
+      Logout
+
+    </button>
+
+  </nav>
+
+</header>
+
+
+<router-outlet></router-outlet>

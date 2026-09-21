@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:white;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+/* Top */
+
+.top-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 40px;
+
+    background:linear-gradient(135deg,#173b70,#2f80ed);
+
+    color:white;
+
+}
+
+.hotel-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#173b70;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+}
+
+.hotel-info h2{
+
+    font-size:24px;
+
+}
+
+.hotel-info span{
+
+    opacity:.8;
+
+}
+
+/* Occupancy */
+
+.status-card{
+
+    width:240px;
+
+}
+
+.status-card .title{
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+.progress{
+
+    height:10px;
+
+    background:#ffffff55;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:8px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:#4ade80;
+
+    border-radius:30px;
+
+}
+
+/* Right */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.datetime{
+
+    text-align:right;
+
+}
+
+.notification{
+
+    position:relative;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:red;
+
+    color:white;
+
+    font-size:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.avatar{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#173b70;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/* Navigation */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 30px;
+
+    background:white;
+
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.navbar a:hover{
+
+    background:#eef5ff;
+
+    color:#2f80ed;
+
+}
+
+.active{
+
+    background:#2f80ed;
+
+    color:white !important;
+
+}
+
+.logout-btn{
+
+    margin-left:auto;
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:12px 24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.top-header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+.header-right{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.navbar{
+
+    flex-wrap:wrap;
+
+}
+
+.logout-btn{
+
+    margin-left:0;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hotel-info{
+
+    flex-direction:column;
+
+}
+
+.navbar a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+}
+
+}

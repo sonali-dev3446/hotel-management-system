@@ -1,0 +1,87 @@
+<div class="chart-grid">
+
+  <!-- Occupancy -->
+
+  <div class="chart-card">
+
+    <h3>Room Occupancy</h3>
+@if(allReservations().length > 0){
+
+    <canvas
+      baseChart
+      [data]="occupancyChartData"
+      [options]="doughnutOptions"
+      [type]="'doughnut'">
+    </canvas>
+}@else{
+
+<p>No data</p>
+
+}
+  </div>
+
+  <!-- Monthly Reservations -->
+
+  <div class="chart-card">
+
+    <h3>Monthly Reservations</h3>
+@if(allReservations().length > 0){
+
+    <canvas
+      baseChart
+      [data]="reservationChartData"
+      [options]="barOptions"
+      [type]="'bar'">
+    </canvas>
+}@else{
+
+<p>No data</p>
+}
+  </div>
+
+</div>
+
+
+<div class="chart-grid">
+
+  <!-- Revenue -->
+
+  <div class="chart-card">
+
+    <h3>Revenue Trend</h3>
+@if(allReservations().length > 0){
+
+    <canvas
+      baseChart
+      [data]="revenueChartData"
+      [options]="lineOptions"
+      [type]="'line'">
+    </canvas>
+}@else{
+
+<p>No data</p>
+
+}
+  </div>
+
+  <!-- Room Distribution -->
+
+  <div class="chart-card">
+
+    <h3>Room Distribution</h3>
+@if(allReservations().length > 0){
+
+    <canvas
+      baseChart
+      [data]="roomChartData"
+      [options]="pieOptions"
+      [type]="'pie'">
+    </canvas>
+}@else{
+
+<p>No data</p>
+
+}
+  </div>
+
+</div>

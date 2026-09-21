@@ -1,0 +1,304 @@
+<div class="auth-container">
+
+<div class="auth-card register">
+
+<h2>Create Account</h2>
+
+<form [formGroup]="registerForm"
+      (ngSubmit)="register()">
+
+<div class="row">
+
+<div class="form-group">
+
+<label>First Name</label>
+
+<input
+formControlName="firstName">
+  @if(registerForm.get('firstName')?.touched &&
+        registerForm.get('firstName')?.hasError('required')){
+
+        <small class="error">
+            First name is required.
+        </small>
+
+    }
+</div>
+
+<div class="form-group">
+
+<label>Last Name</label>
+
+<input
+formControlName="lastName">
+@if(registerForm.get('lastName')?.touched &&
+    registerForm.get('lastName')?.hasError('required')){
+
+<small class="error">
+    Last name is required.
+</small>
+
+}
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input
+type="email"
+formControlName="email">
+@if(registerForm.get('email')?.touched){
+
+    @if(registerForm.get('email')?.hasError('required')){
+
+        <small class="error">
+            Email is required.
+        </small>
+
+    }
+
+    @if(registerForm.get('email')?.hasError('email')){
+
+        <small class="error">
+            Enter a valid email address.
+        </small>
+
+    }
+
+}
+</div>
+
+<div class="form-group">
+
+<label>Phone</label>
+
+<input
+formControlName="phone">
+@if(registerForm.get('phone')?.touched){
+
+    @if(registerForm.get('phone')?.hasError('required')){
+
+        <small class="error">
+            Phone number is required.
+        </small>
+
+    }
+
+    @if(registerForm.get('phone')?.hasError('pattern')){
+
+        <small class="error">
+            Phone number must contain 10 digits.
+        </small>
+
+    }
+
+}
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Password</label>
+
+<input
+type="password"
+formControlName="password">
+@if(registerForm.get('password')?.touched){
+
+    @if(registerForm.get('password')?.hasError('required')){
+
+        <small class="error">
+            Password is required.
+        </small>
+
+    }
+
+    @if(registerForm.get('password')?.hasError('minlength')){
+
+        <small class="error">
+            Password must be at least 6 characters.
+        </small>
+
+    }
+
+}
+</div>
+
+<div class="form-group">
+
+<label>Confirm Password</label>
+
+<input
+type="password"
+formControlName="confirmPassword">
+@if(registerForm.get('confirmPassword')?.touched &&
+    registerForm.get('confirmPassword')?.hasError('required')){
+
+<small class="error">
+    Confirm Password is required.
+</small>
+
+}
+@if(registerForm.hasError('passwordMismatch')
+    && registerForm.get('confirmPassword')?.touched){
+
+<small class="error">
+
+Password and Confirm Password do not match.
+
+</small>
+
+}
+</div>
+
+</div>
+<div class="form-group">
+  <label>Hotel Name</label>
+
+  <input
+    type="text"
+    formControlName="hotelName"
+    placeholder="Enter Hotel Name">
+</div>
+<div class="row">
+
+<div class="form-group">
+
+<label>Date of Birth</label>
+
+<input
+type="date"
+formControlName="dob">
+@if(registerForm.get('dob')?.touched &&
+    registerForm.get('dob')?.hasError('required')){
+
+<small class="error">
+    Date of Birth is required.
+</small>
+
+}
+</div>
+
+<div class="form-group">
+
+<label>Gender</label>
+
+<select formControlName="gender">
+
+<option>Male</option>
+
+<option>Female</option>
+
+<option>Other</option>
+
+</select>
+@if(registerForm.get('gender')?.touched &&
+    registerForm.get('gender')?.hasError('required')){
+
+<small class="error">
+    Please select gender.
+</small>
+
+}
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Address</label>
+
+<textarea
+rows="3"
+formControlName="address">
+
+</textarea>
+@if(registerForm.get('address')?.touched &&
+    registerForm.get('address')?.hasError('required')){
+
+<small class="error">
+    Address is required.
+</small>
+
+}
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>City</label>
+
+<input
+formControlName="city">
+@if(registerForm.get('city')?.touched &&
+    registerForm.get('city')?.hasError('required')){
+
+<small class="error">
+    City is required.
+</small>
+
+}
+</div>
+
+<div class="form-group">
+
+<label>Country</label>
+
+<input
+formControlName="country">
+@if(registerForm.get('country')?.touched &&
+    registerForm.get('country')?.hasError('required')){
+
+<small class="error">
+    Country is required.
+</small>
+
+}
+</div>
+
+</div>
+
+<div class="checkbox">
+
+<label>
+
+<input
+type="checkbox"
+formControlName="terms">
+
+I agree to the Terms & Conditions
+@if(registerForm.get('terms')?.touched &&
+    registerForm.get('terms')?.hasError('required')){
+
+<small class="error">
+    Please accept Terms & Conditions.
+</small>
+
+}
+</label>
+
+</div>
+
+<button [disabled]="registerForm.invalid">
+
+Register
+
+</button>
+
+</form>
+<p>
+Already have an account?
+
+<a   routerLink="/login">
+Login
+</a>
+
+</p>
+</div>
+
+</div>

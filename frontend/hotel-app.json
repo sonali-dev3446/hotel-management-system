@@ -1,0 +1,347 @@
+{
+  "uuid": "421bbfb4-38cf-4965-b04d-4e082fb840e2",
+  "lastMigration": 33,
+  "name": "Hotel app",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "f5e932eb-99f9-4043-9022-17ad27445f6f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "e2d2b7ff-a00f-4e2b-b9fc-418e2f87e606",
+          "body": "{\r\n  \"status\": 200,\r\n  \"message\": \"Reservations fetched successfully\",\r\n  \"data\": [\r\n    {\r\n      \"id\": \"RES001\",\r\n      \"checkInDate\": \"2026-07-10\",\r\n      \"checkOutDate\": \"2026-07-13\",\r\n      \"guestName\": \"John Smith\",\r\n      \"guestEmail\": \"john.smith@gmail.com\",\r\n      \"roomNumber\": 101\r\n    },\r\n    {\r\n      \"id\": \"RES002\",\r\n      \"checkInDate\": \"2026-07-12\",\r\n      \"checkOutDate\": \"2026-07-15\",\r\n      \"guestName\": \"Emma Johnson\",\r\n      \"guestEmail\": \"emma.johnson@gmail.com\",\r\n      \"roomNumber\": 205\r\n    },\r\n    {\r\n      \"id\": \"RES008\",\r\n      \"checkInDate\": \"2026-07-27\",\r\n      \"checkOutDate\": \"2026-07-30\",\r\n      \"guestName\": \"Ava Thomas\",\r\n      \"guestEmail\": \"ava.thomas@gmail.com\",\r\n      \"roomNumber\": 120\r\n    },\r\n    {\r\n      \"id\": \"RES009\",\r\n      \"checkInDate\": \"2026-07-30\",\r\n      \"checkOutDate\": \"2026-08-02\",\r\n      \"guestName\": \"Benjamin Martin\",\r\n      \"guestEmail\": \"benjamin.martin@gmail.com\",\r\n      \"roomNumber\": 502\r\n    },\r\n    {\r\n      \"id\": \"RES010\",\r\n      \"checkInDate\": \"2026-08-02\",\r\n      \"checkOutDate\": \"2026-08-06\",\r\n      \"guestName\": \"Charlotte White\",\r\n      \"guestEmail\": \"charlotte.white@gmail.com\",\r\n      \"roomNumber\": 215\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "28f54ce4-658f-4709-b4da-f2b114d02f92",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "cd5d57f1-ec39-445d-adfd-1529f41bf486",
+          "body": "\r\n    {\r\n      \"id\": \"RES001\",\r\n      \"checkInDate\": \"2026-07-10\",\r\n      \"checkOutDate\": \"2026-07-13\",\r\n      \"guestName\": \"John Smith\",\r\n      \"guestEmail\": \"john.smith@gmail.com\",\r\n      \"roomNumber\": 101\r\n    }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e4da238e-f79d-469c-9e00-45eac05a7ace",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "1b8ef01d-aee9-4945-a84e-d1bb73e0bdae",
+          "body": "\"Delete Successfully\"",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "8bb88ece-208e-4297-a920-29cfa68875c9",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "3aa82ae6-5620-4ae2-bf26-13deec611a76",
+          "body": "\r\n    {\r\n      \"id\": \"RES001\",\r\n      \"checkInDate\": \"2026-07-10\",\r\n      \"checkOutDate\": \"2026-07-13\",\r\n      \"guestName\": \"John Smith\",\r\n      \"guestEmail\": \"john.smith@gmail.com\",\r\n      \"roomNumber\": 101\r\n    }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e0597c6e-66fc-4d08-bb4f-4ad0f8db51a1",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "reservation",
+      "responses": [
+        {
+          "uuid": "2949d7a1-9b70-47bf-906e-0949c27439db",
+          "body": "",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "121775ba-5077-4fe8-a119-24aa85f42c48",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "3190e10c-5bae-4e13-a2fb-c2c38ad9e28d",
+          "body": "{\r\n  \"status\": 201,\r\n  \"message\": \"Registration Successful\",\r\n  \"data\": {\r\n    \"id\": \"USR001\",\r\n    \"firstName\": \"Sonali\",\r\n    \"lastName\": \"Agrawal\",\r\n    \"email\": \"sonali@gmail.com\",\r\n    \"phone\": \"9876543210\",\r\n    \"role\": \"Admin\"\r\n  }\r\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "c25a20b1-ceab-46aa-9ebe-94feedc4f90a",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "4c38cb8e-c073-4dc7-beb7-30a50c30a4a5",
+          "body": "{\r\n  \"status\": 200,\r\n  \"message\": \"Login Successful\",\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.demo.token\",\r\n  \"data\": {\r\n    \"id\": \"USR001\",\r\n    \"firstName\": \"Sonali\",\r\n    \"lastName\": \"Agrawal\",\r\n    \"email\": \"sonali@gmail.com\",\r\n    \"role\": \"Admin\"\r\n  }\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3b1f5c74-08c1-4c00-b29d-04e3eaeeb1a9",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "profile",
+      "responses": [
+        {
+          "uuid": "92b477b1-be89-4496-9d8a-653a9844f841",
+          "body": "{\r\n  \"status\": 200,\r\n  \"message\": \"Login Successful\",\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.demo.token\",\r\n  \"data\": {\r\n    \"id\": \"USR001\",\r\n    \"firstName\": \"Sonali\",\r\n    \"lastName\": \"Agrawal\",\r\n    \"email\": \"sonali@gmail.com\",\r\n    \"role\": \"Admin\"\r\n  }\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f5e932eb-99f9-4043-9022-17ad27445f6f"
+    },
+    {
+      "type": "route",
+      "uuid": "28f54ce4-658f-4709-b4da-f2b114d02f92"
+    },
+    {
+      "type": "route",
+      "uuid": "e4da238e-f79d-469c-9e00-45eac05a7ace"
+    },
+    {
+      "type": "route",
+      "uuid": "8bb88ece-208e-4297-a920-29cfa68875c9"
+    },
+    {
+      "type": "route",
+      "uuid": "e0597c6e-66fc-4d08-bb4f-4ad0f8db51a1"
+    },
+    {
+      "type": "route",
+      "uuid": "121775ba-5077-4fe8-a119-24aa85f42c48"
+    },
+    {
+      "type": "route",
+      "uuid": "c25a20b1-ceab-46aa-9ebe-94feedc4f90a"
+    },
+    {
+      "type": "route",
+      "uuid": "3b1f5c74-08c1-4c00-b29d-04e3eaeeb1a9"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "16f4626b-1cbd-4b60-baee-5d5d237b2d43",
+      "id": "93b0",
+      "name": "Accounts",
+      "documentation": "",
+      "value": "[\n  {{#repeat 10}}\n    {\n      \"id\": \"{{faker 'string.uuid'}}\",\n      \"name\": \"{{faker 'company.name'}}\",\n      \"balance\": {{faker 'finance.amount'}},\n      \"isActive\": {{faker 'datatype.boolean'}}\n    }\n  {{/repeat}}\n]"
+    }
+  ],
+  "callbacks": []
+}

@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "firstName": "user1",
+      "lastName": "ag",
+      "email": "user1@gmail.com",
+      "phone": "9412345678",
+      "password": "1234567",
+      "confirmPassword": "1234567",
+      "dob": "2026-07-16",
+      "gender": "Female",
+      "address": "h.no 123, sjjsjs",
+      "city": "lucknow",
+      "country": "India",
+      "terms": true,
+      "id": "KADNOBl7kW0"
+    },
+    {
+      "firstName": "User2",
+      "lastName": "user2test",
+      "email": "user2@gmail.com",
+      "phone": "9234123456",
+      "password": "1234567",
+      "confirmPassword": "123456",
+      "dob": "2026-07-13",
+      "gender": "Female",
+      "address": "House.no 123,abbd",
+      "city": "lucknow",
+      "country": "India",
+      "terms": true,
+      "id": "v2P-qAWRkBI"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "6PRWY65dajA",
+      "userId": "KADNOBl7kW0",
+      "guestName": "sonali",
+      "guestEmail": "sonali@gmail.com",
+      "roomNumber": 102,
+      "checkInDate": "2026-07-11",
+      "checkOutDate": "2026-07-12"
+    },
+    {
+      "id": "iyklFnMLzVk",
+      "userId": "KADNOBl7kW0",
+      "guestName": "Ritesh",
+      "guestEmail": "ritesh@gmail.com",
+      "roomNumber": 112,
+      "checkInDate": "2026-07-13",
+      "checkOutDate": "2026-07-19"
+    },
+    {
+      "id": "dNa1jJRxvlE",
+      "userId": "v2P-qAWRkBI",
+      "guestName": "Shivam",
+      "guestEmail": "shivam@gmail.com",
+      "roomNumber": 1023,
+      "checkInDate": "2026-07-13",
+      "checkOutDate": "2026-07-17"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
