@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { LoginResponse, User } from '../models/reservation';
 import { HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:5000/auth'; //base url from mockoon
-
+  // private apiUrl = 'http://localhost:5000/auth'; //base url from mockoon
+  private apiUrl = `${environment.apiUrl}/auth`;
   constructor(private http: HttpClient) {}
 
  login(email: string, password: string) {

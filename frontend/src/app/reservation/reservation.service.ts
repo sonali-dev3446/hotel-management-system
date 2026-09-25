@@ -4,13 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
-
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class ReservationService {
   authService = inject(AuthService);
-private readonly apiUrl = 'http://localhost:5000/reservations';
+// private readonly apiUrl = 'http://localhost:5000/reservations';
+private readonly apiUrl = `${environment.apiUrl}/reservations`;
       // token:string|null = null;
 
   constructor(private http: HttpClient) {
